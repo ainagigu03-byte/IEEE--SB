@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events — IEEE Student Branch</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/events.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR (same on every page) -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">⚡</span>
+      <span class="nav-title">IEEE SB</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="execom.html">ExeCom</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="societies.html">Societies</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="auth.html" class="btn-login">Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Our <span class="accent">Events</span></h1>
+    <p>Workshops, seminars, competitions and more from IEEE CEK</p>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <section class="events-section">
+    <div class="container">
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+        <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+        <button class="filter-btn" data-filter="past">Past</button>
+      </div>
+
+      <!-- EVENTS GRID -->
+      <div class="events-grid" id="eventsGrid">
+
+        <!-- EVENT CARD 1 -->
+        <div class="event-card" data-status="upcoming">
+          <div class="event-badge upcoming">Upcoming</div>
+          <div class="event-icon">🚀</div>
+          <div class="event-info">
+            <h3>Tech Summit 2026</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> June 15, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — Main Auditorium</p>
+            <p class="event-desc">A full day technical summit featuring talks from industry experts, project showcases and networking.</p>
+            <a href="#" class="btn-primary small">Register Now</a>
+          </div>
+        </div>
+
+        <!-- EVENT CARD 2 -->
+        <div class="event-card" data-status="upcoming">
+          <div class="event-badge upcoming">Upcoming</div>
+          <div class="event-icon">💻</div>
+          <div class="event-info">
+            <h3>Web Dev Workshop</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> May 28, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-wifi"></i> Online — Google Meet</p>
+            <p class="event-desc">A beginner friendly workshop on HTML, CSS and JavaScript. Perfect for first year students.</p>
+            <a href="#" class="btn-primary small">Register Now</a>
+          </div>
+        </div>
+
+        <!-- EVENT CARD 3 -->
+        <div class="event-card" data-status="ongoing">
+          <div class="event-badge ongoing">Ongoing</div>
+          <div class="event-icon">🏆</div>
+          <div class="event-info">
+            <h3>Hackathon 2026</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> May 18–20, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — Lab Block</p>
+            <p class="event-desc">48 hour hackathon. Build solutions for real world problems. Open to all branches.</p>
+            <a href="#" class="btn-primary small">View Details</a>
+          </div>
+        </div>
+
+        <!-- EVENT CARD 4 -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🤖</div>
+          <div class="event-info">
+            <h3>AI & ML Bootcamp</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> March 10, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — Seminar Hall</p>
+            <p class="event-desc">3 day bootcamp on Artificial Intelligence and Machine Learning fundamentals with hands-on projects.</p>
+            <a href="#" class="btn-ghost small">View Report</a>
+          </div>
+        </div>
+
+        <!-- EVENT CARD 5 -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">⚡</div>
+          <div class="event-info">
+            <h3>Circuit Design Workshop</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> February 5, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-wifi"></i> Online — Zoom</p>
+            <p class="event-desc">Introduction to circuit design using simulation tools. Attended by 120+ students.</p>
+            <a href="#" class="btn-ghost small">View Report</a>
+          </div>
+        </div>
+
+        <!-- EVENT CARD 6 -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🎤</div>
+          <div class="event-info">
+            <h3>Industry Talk Series</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> January 20, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — Auditorium</p>
+            <p class="event-desc">Guest lectures from engineers at Google, Infosys and ISRO sharing their career journeys.</p>
+            <a href="#" class="btn-ghost small">View Report</a>
+          </div>
+        </div>
+
+      </div><!-- end events-grid -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">⚡ IEEE Student Branch</p>
+        <p class="footer-tagline">College of Engineering Kidangoor</p>
+      </div>
+      <div class="footer-links">
+        <a href="events.html">Events</a>
+        <a href="execom.html">ExeCom</a>
+        <a href="history.html">History</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 IEEE Student Branch. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>
