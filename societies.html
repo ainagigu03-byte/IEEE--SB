@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Societies - IEEE SB CEK</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/societies.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">⚡</span>
+      <span class="nav-title">IEEE SB</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="execom.html">ExeCom</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="societies.html" class="active">Societies</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="auth.html" class="btn-login">Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- page heading -->
+  <div class="page-header">
+    <h1>Our <span class="accent">Societies</span></h1>
+    <p>These are the technical societies active under our IEEE student branch</p>
+  </div>
+
+  <div class="container">
+
+    <!-- society tabs -->
+    <div class="society-tabs">
+      <button class="soc-tab active" data-society="cs">💻 CS Society</button>
+      <button class="soc-tab" data-society="pes">⚡ PES</button>
+      <button class="soc-tab" data-society="wie">👩‍💻 WIE</button>
+      <button class="soc-tab" data-society="ras">🤖 RAS</button>
+    </div>
+
+    <!-- CS Society -->
+    <div class="society-content active" id="cs">
+      <div class="society-hero">
+        <div class="society-icon">💻</div>
+        <div>
+          <h2>Computer Society</h2>
+          <p class="society-tagline">Exploring the world of computing and software!</p>
+        </div>
+      </div>
+
+      <div class="society-grid">
+        <div class="soc-card">
+          <h3>📖 About</h3>
+          <p>The Computer Society at IEEE SB CEK is focused on helping students learn about software development, artificial intelligence, cybersecurity and all things related to computers. We conduct workshops, hackathons and coding competitions throughout the year.</p>
+        </div>
+        <div class="soc-card">
+          <h3>👥 Our Team</h3>
+          <p><strong>Branch Counsellor:</strong> REKHA K S</p>
+          <p><strong>Chair:</strong> SABIN K SANTHOSH</p>
+          <p><strong>Vice Chair:</strong> JESWIN JOY</p>
+          <p><strong>Secretary:</strong> RINA SUSAN KURUVILLA</p>
+          <p><strong>Members:</strong> 50+ active members</p>
+        </div>
+        <div class="soc-card">
+          <h3>📅 Recent Events</h3>
+          <p>🔹 Web Dev Workshop — March 2026</p>
+          <p>🔹 AI Bootcamp — January 2026</p>
+          <p>🔹 Hackathon 2025 — November 2025</p>
+          <p>🔹 Coding Contest — September 2025</p>
+        </div>
+        <div class="soc-card">
+          <h3>📚 Resources</h3>
+          <p>🔗 <a href="#">Study Materials</a></p>
+          <p>🔗 <a href="#">Previous Event Slides</a></p>
+          <p>🔗 <a href="#">Useful Links</a></p>
+          <p>🔗 <a href="#">Join our WhatsApp Group</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PES Society -->
+    <div class="society-content" id="pes">
+      <div class="society-hero">
+        <div class="society-icon">⚡</div>
+        <div>
+          <h2>Power & Energy Society</h2>
+          <p class="society-tagline">Powering the future with clean energy!</p>
+        </div>
+      </div>
+
+      <div class="society-grid">
+        <div class="soc-card">
+          <h3>📖 About</h3>
+          <p>The Power and Energy Society focuses on electrical power systems, renewable energy and smart grids. We help students understand how the world's energy systems work and how we can make them better and more sustainable.</p>
+        </div>
+        <div class="soc-card">
+          <h3>👥 Our Team</h3>
+          <p><strong>Chapter Advisor:</strong> SOUMYA K G </p>
+          <p><strong>Chair:</strong> K S KASHINADH </p>
+          <p><strong>Vice Chair:</strong> ADWAITH KRISHNA S </p>
+          <p><strong>Secretary:</strong> CHRIS JAMES ANTONY </p>
+          <p><strong>Members:</strong> 40+ active members</p>
+        </div>
+        <div class="soc-card">
+          <h3>📅 Recent Events</h3>
+          <p>🔹 Solar Energy Workshop — Feb 2026</p>
+          <p>🔹 Smart Grid Seminar — Dec 2025</p>
+          <p>🔹 Circuit Design Lab — Oct 2025</p>
+          <p>🔹 Industry Visit — August 2025</p>
+        </div>
+        <div class="soc-card">
+          <h3>📚 Resources</h3>
+          <p>🔗 <a href="#">Study Materials</a></p>
+          <p>🔗 <a href="#">Previous Event Slides</a></p>
+          <p>🔗 <a href="#">Useful Links</a></p>
+          <p>🔗 <a href="#">Join our WhatsApp Group</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WIE Society -->
+    <div class="society-content" id="wie">
+      <div class="society-hero">
+        <div class="society-icon">👩‍💻</div>
+        <div>
+          <h2>Women in Engineering</h2>
+          <p class="society-tagline">Empowering women in technology!</p>
+        </div>
+      </div>
+
+      <div class="society-grid">
+        <div class="soc-card">
+          <h3>📖 About</h3>
+          <p>WIE at IEEE SB CEK is dedicated to promoting women in engineering and technology. We create a supportive community for women students to grow, learn and lead. We organize mentorship programs, technical workshops and leadership events.</p>
+        </div>
+        <div class="soc-card">
+          <h3>👥 Our Team</h3>
+          <p><strong>Chapter Advisor:</strong> MARY PRIYANKA K S </p>
+          <p><strong>Chair:</strong> MALAVIKA C BIJU </p>
+          <p><strong>Vice Chair:</strong> ARYA C ANISH </p>
+          <p><strong>Secretary:</strong> NIDHA NAJEEB </p>
+          <p><strong>Members:</strong> 45+ active members</p>
+        </div>
+        <div class="soc-card">
+          <h3>📅 Recent Events</h3>
+          <p>🔹 Leadership Workshop — April 2026</p>
+          <p>🔹 Mentorship Program — Feb 2026</p>
+          <p>🔹 Tech Talk Series — Nov 2025</p>
+          <p>🔹 Women in Tech Day — Oct 2025</p>
+        </div>
+        <div class="soc-card">
+          <h3>📚 Resources</h3>
+          <p>🔗 <a href="#">Study Materials</a></p>
+          <p>🔗 <a href="#">Previous Event Slides</a></p>
+          <p>🔗 <a href="#">Useful Links</a></p>
+          <p>🔗 <a href="#">Join our WhatsApp Group</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RAS Society -->
+    <div class="society-content" id="ras">
+      <div class="society-hero">
+        <div class="society-icon">🤖</div>
+        <div>
+          <h2>Robotics & Automation Society</h2>
+          <p class="society-tagline">Building the robots of tomorrow!</p>
+        </div>
+      </div>
+
+      <div class="society-grid">
+        <div class="soc-card">
+          <h3>📖 About</h3>
+          <p>The Robotics and Automation Society is for students who love building things! We work on robotics projects, automation systems and embedded programming. Our team has won multiple robotics competitions at national level.</p>
+        </div>
+        <div class="soc-card">
+          <h3>👥 Our Team</h3>
+          <p><strong>Chapter Advisor:</strong> MARY PRIYANKA K S </p>
+          <p><strong>Chair:</strong> ABHIRAM CHANDRASENAN </p>
+          <p><strong>Vice Chair:</strong> DEVAJ A K </p>
+          <p><strong>Secretary:</strong> DEVAKRISHNA BENNY </p>
+          <p><strong>Members:</strong> 35+ active members</p>
+        </div>
+        <div class="soc-card">
+          <h3>📅 Recent Events</h3>
+          <p>🔹 Robotics Workshop — March 2026</p>
+          <p>🔹 Arduino Bootcamp — Jan 2026</p>
+          <p>🔹 Robowar Competition — Dec 2025</p>
+          <p>🔹 Drone Building Workshop — Sep 2025</p>
+        </div>
+        <div class="soc-card">
+          <h3>📚 Resources</h3>
+          <p>🔗 <a href="#">Study Materials</a></p>
+          <p>🔗 <a href="#">Previous Event Slides</a></p>
+          <p>🔗 <a href="#">Useful Links</a></p>
+          <p>🔗 <a href="#">Join our WhatsApp Group</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">⚡ IEEE Student Branch</p>
+        <p class="footer-tagline">College of Engineering Kidangoor</p>
+      </div>
+      <div class="footer-links">
+        <a href="events.html">Events</a>
+        <a href="execom.html">ExeCom</a>
+        <a href="history.html">History</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 IEEE Student Branch CEK. All rights reserved | Designed by AINA GIGU.</p>
+  </footer>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/societies.js"></script>
+</body>
+</html>

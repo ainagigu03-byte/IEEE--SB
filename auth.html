@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - IEEE SB CEK</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/auth.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">⚡</span>
+      <span class="nav-title">IEEE SB</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="execom.html">ExeCom</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="societies.html">Societies</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="auth.html" class="btn-login active">Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- login page -->
+  <div class="auth-page">
+
+    <div class="auth-box">
+
+      <!-- logo -->
+      <div class="auth-logo">⚡</div>
+      <h2>IEEE SB CEK</h2>
+      <p class="auth-subtitle">Login to access your dashboard</p>
+
+      <!-- role selector -->
+      <div class="role-selector">
+        <button class="role-btn active" id="btnAdmin">Admin Login</button>
+        <button class="role-btn" id="btnExecom">ExeCom Login</button>
+      </div>
+
+      <!-- admin login form -->
+      <div class="login-form" id="adminForm">
+        <p class="form-label">Admin — Full access to manage the website</p>
+
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Admin Username" id="adminUser"/>
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Password" id="adminPass"/>
+        </div>
+
+        <button class="login-btn" onclick="adminLogin()">Login as Admin</button>
+        <p class="login-hint" id="adminError"></p>
+      </div>
+
+      <!-- execom login form -->
+      <div class="login-form hidden" id="execomForm">
+        <p class="form-label">ExeCom — Access based on your role</p>
+
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Your Name or Username" id="execomUser"/>
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Password" id="execomPass"/>
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-id-badge"></i>
+          <select id="execomRole">
+            <option value="">Select your role</option>
+            <option value="chair">Chairperson</option>
+            <option value="vicechair">Vice Chairperson</option>
+            <option value="secretary">Secretary</option>
+            <option value="treasurer">Treasurer</option>
+            <option value="webmaster">Webmaster</option>
+            <option value="coordinator">Event Coordinator</option>
+          </select>
+        </div>
+
+        <button class="login-btn" onclick="execomLogin()">Login as ExeCom</button>
+        <p class="login-hint" id="execomError"></p>
+      </div>
+
+      <a href="index.html" class="back-home">← Back to Home</a>
+
+    </div>
+  </div>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/auth.js"></script>
+</body>
+</html>
