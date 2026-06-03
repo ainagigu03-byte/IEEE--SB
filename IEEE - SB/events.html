@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events — IEEE Student Branch</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/events.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR (same on every page) -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">⚡</span>
+      <span class="nav-title">IEEE SB</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="execom.html">ExeCom</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="societies.html">Societies</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="auth.html" class="btn-login">Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Our <span class="accent">Events</span></h1>
+    <p>Workshops, seminars, competitions and more from IEEE CEK</p>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <section class="events-section">
+    <div class="container">
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+        <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+        <button class="filter-btn" data-filter="past">Past</button>
+      </div>
+
+      <!-- EVENTS GRID -->
+      <div class="events-grid" id="eventsGrid">
+
+         <!-- Circuitron -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">⚡</div>
+          <div class="event-info">
+            <h3>Circuitron</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> June 1, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-wifi"></i> Online | ₹200</p>
+            <p class="event-desc">An exciting electronics and circuit design competition conducted online. Students showcased their technical skills in circuit building and problem solving!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- BuildX -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🔨</div>
+          <div class="event-info">
+            <h3>BuildX</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> June 1, 2026</p>
+            <p class="event-mode"><i class="fa-solid fa-wifi"></i> Online | ₹200</p>
+            <p class="event-desc">A build and create competition where students designed and developed innovative technical solutions. A great platform to showcase creativity!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- ElectraQuest -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🎯</div>
+          <div class="event-info">
+            <h3>ElectraQuest 2026</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> April 23, 2026 — 7:00 PM</p>
+            <p class="event-mode"><i class="fa-solid fa-wifi"></i> Online | Free</p>
+            <p class="event-desc">An IEEE-inspired quiz on Power Systems and Energy covering Electrical Engineering, Power Systems and General Science topics!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Cogentia V2 -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🧠</div>
+          <div class="event-info">
+            <h3>Cogentia V2</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> December 6, 2025 — 9AM to 4PM</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — ASAP Hall | Free</p>
+            <p class="event-desc">A full day technical event at ASAP Hall. Successfully completed with great participation from students across all branches!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Talk Session -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🎤</div>
+          <div class="event-info">
+            <h3>Talk Session</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> October 18, 2025 — 8:00 PM</p>
+            <p class="event-mode"><i class="fa-solid fa-wifi"></i> Online — Google Meet | Free</p>
+            <p class="event-desc">An inspiring talk session by Silda Sholly, Associate Analyst at Jumbotail Technologies. She shared her journey in tech and career insights!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Bingo -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🎮</div>
+          <div class="event-info">
+            <h3>Bingo — Networking with Hoogo</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> September 17, 2025</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> College Auditorium | Free</p>
+            <p class="event-desc">A fun networking event using Hoogo by MakemyPass. Students connected with each other in a unique and interactive way!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Zerone -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">0️⃣</div>
+          <div class="event-info">
+            <h3>Zerone — Let's Start From Zero</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> September 17, 2025 — 9AM to 4PM</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — College Auditorium | Free</p>
+            <p class="event-desc">A full day beginner friendly technical event for first year students to get started with technology and IEEE activities!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Pitch the Product -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">💡</div>
+          <div class="event-info">
+            <h3>Pitch the Product</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> September 17, 2025</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — College Auditorium | Free</p>
+            <p class="event-desc">Students pitched their innovative product ideas to a panel. A great opportunity to develop entrepreneurial and presentation skills!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Sell the Product -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🛒</div>
+          <div class="event-info">
+            <h3>Sell the Product</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> September 17, 2025</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — College Campus | Free</p>
+            <p class="event-desc">A fun marketing challenge where students learned the art of selling and persuasion through a hands-on product selling activity!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Treasure Hunt -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🗺️</div>
+          <div class="event-info">
+            <h3>Treasure Hunt</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> September 17, 2025</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — College Campus | Free</p>
+            <p class="event-desc">An exciting treasure hunt across the college campus combining technical clues and fun challenges. Teams competed to find the hidden treasure!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Mindclans -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🧩</div>
+          <div class="event-info">
+            <h3>Mindclans</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> September 17, 2025</p>
+            <p class="event-mode"><i class="fa-solid fa-location-dot"></i> Offline — College Auditorium | Free</p>
+            <p class="event-desc">A mind games and strategy competition where students tested their logical thinking and problem solving abilities in teams!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+ 
+        <!-- Figmento -->
+        <div class="event-card" data-status="past">
+          <div class="event-badge past">Past</div>
+          <div class="event-icon">🎨</div>
+          <div class="event-info">
+            <h3>Figmento</h3>
+            <p class="event-date"><i class="fa-solid fa-calendar"></i> September 3-6, 2025</p>
+            <p class="event-mode"><i class="fa-solid fa-wifi"></i> Online — Google Meet | ₹50</p>
+            <p class="event-desc">A 3-day Figma design workshop teaching UI/UX design fundamentals. Certificates and activity points were provided to all participants!</p>
+            <a href="https://ieee.ce-kgr.org/events" class="btn-ghost small">View Details</a>
+          </div>
+        </div>
+
+      </div><!-- end events-grid -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">⚡ IEEE Student Branch</p>
+        <p class="footer-tagline">College of Engineering Kidangoor</p>
+      </div>
+      <div class="footer-links">
+        <a href="events.html">Events</a>
+        <a href="execom.html">ExeCom</a>
+        <a href="history.html">History</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/ieeesbcekgr?igsh=dXZia3k3bngwZjRz"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ieeecekgr/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 IEEE Student Branch. All rights reserved | Designed by AINA GIGU.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>
