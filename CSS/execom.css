@@ -160,6 +160,11 @@
   color: var(--text-dim);
 }
 
+.disabled-social {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 
 
 /* ===========================

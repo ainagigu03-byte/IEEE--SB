@@ -127,6 +127,31 @@
   border-color: var(--accent);
 }
 
+.society-image {
+    display: block;
+    width: 100%;
+    /* Fixes scale: adjusts perfectly between mobile and desktop widths */
+    max-width: 600px; 
+    /* Fixes zoom/distortion: forces the image to keep its original shape */
+    height: auto; 
+    object-fit: contain;
+    
+    /* Aesthetics: softens the edges to match your container styles */
+    border-radius: 16px; 
+    margin: 40px auto; 
+    
+    /* Blending: softens the harsh contrast between the white poster and dark background */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    
+    /* Clean up transitions if your layout scales dynamically */
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect for a premium, interactive feel */
+.society-image:hover {
+    transform: translateY(-5px);
+}
+
 @media (max-width: 768px) {
   .society-tabs {
     gap: 8px;

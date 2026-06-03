@@ -273,6 +273,28 @@ img { max-width: 100%; display: block; }
 .ql-card:hover i { color: var(--bg); }
 
 /* ===========================
+   GALLERY
+=========================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ===========================
    FOOTER
 =========================== */
 .footer {

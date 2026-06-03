@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <!-- navbar -->
   <nav class="navbar">
     <div class="nav-brand">
       <span class="nav-logo">⚡</span>
@@ -32,54 +31,44 @@
     </button>
   </nav>
 
-  <!-- login page -->
   <div class="auth-page">
-
     <div class="auth-box">
 
-      <!-- logo -->
       <div class="auth-logo">⚡</div>
       <h2>IEEE SB CEK</h2>
       <p class="auth-subtitle">Login to access your dashboard</p>
 
-      <!-- role selector -->
       <div class="role-selector">
         <button class="role-btn active" id="btnAdmin">Admin Login</button>
         <button class="role-btn" id="btnExecom">ExeCom Login</button>
       </div>
 
-      <!-- admin login form -->
+      <!-- admin form -->
       <div class="login-form" id="adminForm">
         <p class="form-label">Admin — Full access to manage the website</p>
-
         <div class="input-group">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" placeholder="Admin Username" id="adminUser"/>
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Admin Email" id="adminEmail"/>
         </div>
-
         <div class="input-group">
           <i class="fa-solid fa-lock"></i>
           <input type="password" placeholder="Password" id="adminPass"/>
         </div>
-
-        <button class="login-btn" onclick="adminLogin()">Login as Admin</button>
+        <button class="login-btn" id="adminLoginBtn">Login as Admin</button>
         <p class="login-hint" id="adminError"></p>
       </div>
 
-      <!-- execom login form -->
+      <!-- execom form -->
       <div class="login-form hidden" id="execomForm">
         <p class="form-label">ExeCom — Access based on your role</p>
-
         <div class="input-group">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" placeholder="Your Name or Username" id="execomUser"/>
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Your Email" id="execomEmail"/>
         </div>
-
         <div class="input-group">
           <i class="fa-solid fa-lock"></i>
           <input type="password" placeholder="Password" id="execomPass"/>
         </div>
-
         <div class="input-group">
           <i class="fa-solid fa-id-badge"></i>
           <select id="execomRole">
@@ -92,8 +81,7 @@
             <option value="coordinator">Event Coordinator</option>
           </select>
         </div>
-
-        <button class="login-btn" onclick="execomLogin()">Login as ExeCom</button>
+        <button class="login-btn" id="execomLoginBtn">Login as ExeCom</button>
         <p class="login-hint" id="execomError"></p>
       </div>
 
@@ -102,7 +90,93 @@
     </div>
   </div>
 
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDUqi6c979HdojNMtoclUeEyiz4ubRab1U",
+      authDomain: "ieee-ce-kgr-website.firebaseapp.com",
+      projectId: "ieee-ce-kgr-website",
+      storageBucket: "ieee-ce-kgr-website.firebasestorage.app",
+      messagingSenderId: "557381248492",
+      appId: "1:557381248492:web:5329b65ddb0d2da8be8cc9"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // hamburger
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // tab switching
+    document.getElementById('btnAdmin').addEventListener('click', () => {
+      document.getElementById('btnAdmin').classList.add('active');
+      document.getElementById('btnExecom').classList.remove('active');
+      document.getElementById('adminForm').classList.remove('hidden');
+      document.getElementById('execomForm').classList.add('hidden');
+    });
+
+    document.getElementById('btnExecom').addEventListener('click', () => {
+      document.getElementById('btnExecom').classList.add('active');
+      document.getElementById('btnAdmin').classList.remove('active');
+      document.getElementById('execomForm').classList.remove('hidden');
+      document.getElementById('adminForm').classList.add('hidden');
+    });
+
+    // admin login
+    document.getElementById('adminLoginBtn').addEventListener('click', async () => {
+      const email = document.getElementById('adminEmail').value;
+      const pass = document.getElementById('adminPass').value;
+      const error = document.getElementById('adminError');
+
+      if (!email || !pass) {
+        error.textContent = 'Please fill in all fields!';
+        return;
+      }
+
+      try {
+        error.textContent = 'Logging in...';
+        const userCredential = await signInWithEmailAndPassword(auth, email, pass);
+        localStorage.setItem('role', 'admin');
+        localStorage.setItem('name', userCredential.user.email);
+        localStorage.setItem('uid', userCredential.user.uid);
+        window.location.href = 'dashboard.html';
+      } catch (err) {
+        error.textContent = 'Wrong email or password. Try again!';
+      }
+    });
+
+    // execom login
+    document.getElementById('execomLoginBtn').addEventListener('click', async () => {
+      const email = document.getElementById('execomEmail').value;
+      const pass = document.getElementById('execomPass').value;
+      const role = document.getElementById('execomRole').value;
+      const error = document.getElementById('execomError');
+
+      if (!email || !pass || !role) {
+        error.textContent = 'Please fill in all fields!';
+        return;
+      }
+
+      try {
+        error.textContent = 'Logging in...';
+        const userCredential = await signInWithEmailAndPassword(auth, email, pass);
+        localStorage.setItem('role', role);
+        localStorage.setItem('name', userCredential.user.email);
+        localStorage.setItem('uid', userCredential.user.uid);
+        alert('Welcome! Logged in as ' + role);
+        window.location.href = 'dashboard.html';
+      } catch (err) {
+        error.textContent = 'Wrong email or password. Try again!';
+      }
+    });
+  </script>
+
   <script src="JS/main.js"></script>
-  <script src="JS/auth.js"></script>
 </body>
 </html>
